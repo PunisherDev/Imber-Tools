@@ -2,7 +2,7 @@
 /*
 Plugin Name: Imber Tools
 Description: Imber Development Tools plugin.
-Version: 1.0
+Version: 1.1
 Author: Imber Development
 Author URI:  https://imber.cc/
 */
@@ -184,7 +184,7 @@ add_action('parse_request', 'enable_discord_redirect');
 
 function remove_author_meta() {
     $enable_author_meta = get_option('enable_author_meta');
-    if ($enable_author_meta != 1) {
+    if ($enable_author_meta) {
         add_filter('get_the_author', '__return_false');
         add_filter('the_author', '__return_false');
         add_filter('author_link', '__return_false');
