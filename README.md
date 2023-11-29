@@ -11,5 +11,6 @@
 - Discord embed color changer
 - Disable author link from Discord embeds
 - Custom Discord invite (site.com/discord)
+- Adds support for product restock logs when using the Imber bot
 
 ![Features](image.png)
