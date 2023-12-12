@@ -87,7 +87,7 @@ function render_header_settings_page() {
                 <tr>
                     <th scope="row">Discord Invite Link</th>
                     <td>
-                        <p>https://discord.gg/<input type="text" name="discord_invite_link" value="<?php echo esc_attr(get_option('discord_invite_link', "RUMH76H4AJ")); ?>"></p>
+                        <p>https://discord.gg/<input type="text" name="discord_invite_link" value="<?php echo esc_attr(get_option('discord_invite_link', "INVITE-CODE-HERE")); ?>"></p>
                     </td>
                 </tr>
             </table>
