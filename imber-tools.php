@@ -107,37 +107,23 @@ function render_header_settings_page() {
     <?php
 }
 
-//Add new parameters to product metadata for restock notifications
 add_action('woocommerce_product_before_set_stock', function ($product) {
     $product_id = $product->get_id();
     
-    // Get the current stock quantity
+    $old_stock = get_post_meta($product_id, '_stock', true);
     $new_stock = $product->get_stock_quantity();
     
-    // Get the old stock quantity from post meta
-    $old_stock = get_post_meta($product_id, '_stock', true);
-    
-    // Update the 'old_stock_quantity' metadata
     update_post_meta($product_id, 'old_stock_quantity', $old_stock);
-    
-    // Update the 'new_stock_quantity' metadata
     update_post_meta($product_id, 'new_stock_quantity', $new_stock);
 });
 
-//Add new parameters to variation metadata for restock notifications
 add_action('woocommerce_variation_before_set_stock', function ($product) {
     $product_id = $product->get_id();
     
-    // Get the current stock quantity
+    $old_stock = get_post_meta($product_id, '_stock', true);
     $new_stock = $product->get_stock_quantity();
     
-    // Get the old stock quantity from post meta
-    $old_stock = get_post_meta($product_id, '_stock', true);
-    
-    // Update the 'old_stock_quantity' metadata
     update_post_meta($product_id, 'old_stock_quantity', $old_stock);
-    
-    // Update the 'new_stock_quantity' metadata
     update_post_meta($product_id, 'new_stock_quantity', $new_stock);
 });
 
